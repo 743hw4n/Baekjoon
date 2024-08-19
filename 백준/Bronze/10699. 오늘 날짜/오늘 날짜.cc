@@ -2,11 +2,10 @@
 #include <ctime>
 using namespace std;
 
-int main(void) {
-    struct tm* t;
-    time_t timer;
-    timer = time(NULL);
-    t = localtime(&timer);
+int main() {
+    time_t timer = time(NULL);
+    struct tm* t = localtime(&timer);
+   
 
     cout << t->tm_year + 1900 << "-";
     cout.width(2);
