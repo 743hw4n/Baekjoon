@@ -13,7 +13,7 @@ void printStars(int n) {
 	for (int i = 0; i <= center; i++) {
 		for (int j = 0; j < n; j++) {
 			if (j == center - i || j == center + i) cout << "*";
-			else if (j > center + i) break;
+			else if (j > center + i) break; // 불필요한 공백을 없애는 코드
 			else cout << " ";
 		}
 		cout << endl;
