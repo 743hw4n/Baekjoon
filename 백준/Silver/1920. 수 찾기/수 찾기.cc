@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 int n, m;
-int arr[100000];
+int arr[100001];
 
 
 void binary_search(int x) {
