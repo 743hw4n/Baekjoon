@@ -1,6 +1,8 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
+
+
+int m = 1234567891;
 
 int main() {
 	
@@ -10,9 +12,12 @@ int main() {
 	cin >> n;
 	cin >> str;
 
-	int sum = 0;
+	long long sum = 0;
+	long long r = 1;
+
 	for (int i = 0; i < n; i++) {
-		sum += (str[i] - 96) * pow(31, i);
+		sum = (sum + (str[i] - 96) * r) % m;
+		r = (r* 31) % m;
 	}
 
 	cout << sum;
