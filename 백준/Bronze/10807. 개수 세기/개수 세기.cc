@@ -1,26 +1,24 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-int main() {
-  int N;
-  cin >> N;
+int main() { 
+  int n;
+  cin >> n;
 
-  vector<int> nums;
+  int arr[100];
 
-  for (int i = 0; i < N; i++) {
-    int num;
-    cin >> num;
-    nums.push_back(num);
+  for (int i = 0; i < n; i++) {
+    cin >> arr[i];
   }
 
-  int v;
-  int cnt = 0;
+  int v; 
   cin >> v;
+  int cnt = 0;
 
-  for (auto& num : nums) {
-    if (num == v)
+  for (int i = 0; i < n; i++) {
+    if (arr[i] == v) {
       cnt++;
+    }
   }
 
   cout << cnt;
